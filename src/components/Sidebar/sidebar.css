@@ -1,0 +1,11 @@
+.new-active {
+    color: black !important;
+}
+
+.new-active>i {
+    color: black !important;
+}
+
+.link {
+    color: white;
+}

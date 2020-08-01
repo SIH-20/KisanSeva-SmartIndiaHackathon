@@ -1,1 +1,0 @@
-class ChangeQuantity{constructor(t){this.qunatity=quantity}Change(t){$.ajax({type:"post",url:"/update-item-quantity",data:{quantity:this.qunatity},success:function(t){console.log(t)},error:function(t){console.log(t)}})}}

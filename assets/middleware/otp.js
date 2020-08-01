@@ -1,1 +1,0 @@
-const axios=require("axios"),OTP=require("../../models/Otp");module.exports.sendOtp=async(e,s,o)=>{const n=(await OTP.findOne({user:e.user._id})).otp,t=e.user.phone;axios.get(`https://api.textlocal.in/send/?apiKey=9vAkgLw23+M-W42nfAuLIxvHE1dkEhr8kjtx8FQ9EV&sender=TXTLCL&numbers=${t}&message= Your OTP for Buyfresh Login: ${n}`).then(e=>{o()}).catch(e=>{console.log(e),o()})};

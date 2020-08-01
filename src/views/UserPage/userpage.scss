@@ -1,0 +1,72 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    box-shadow: 1px 1px 11px 1px #dcdcdc;
+}
+
+.profile-info {
+    height: 50%;
+    width: 50%;
+    margin-left: 11px;
+    margin-top: 6px;
+    margin: auto;
+}
+
+.profile-image {
+    border-radius: 50%;
+    height: 157px;
+    width: 157px;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+.profile-details {
+    height: 6.5625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 10000;
+    flex-wrap: wrap;
+    width: 28rem;
+}
+
+.chart-container {
+    height: 50%;
+    width: 55%;
+    margin-left: -29px;
+    position: relative;
+    top: 29px;
+    left: 30px;
+}
+
+.canvasjs-chart-canvas {
+    height: 383px !important;
+    padding-bottom: 47px !important;
+    padding-left: 16px !important;
+    margin-left: 60px !important;
+    bottom: -23rem !important;
+}
+
+h4 {
+    text-align: center;
+    z-index: 100000000000;
+    padding-left: 91px;
+    position: absolute;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.table-width {
+    position: relative;
+    left: -69px;
+    width: 106%;
+    top: 1rem;
+    text-align: center;
+    overflow-y: scroll;
+}
+.table-responsive-md{
+    overflow-y: scroll;
+    position: relative;
+    top: 33px;
+}

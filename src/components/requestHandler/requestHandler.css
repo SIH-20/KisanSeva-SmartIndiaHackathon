@@ -1,0 +1,61 @@
+.Request {
+    height: 18.6rem;
+    width: 38.5rem;
+    margin: auto;
+    position: relative;
+    bottom: 32rem !important;
+    z-index: 5000000000;
+    background-color: #FFFFFF;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+
+}
+
+
+@keyframes enter {
+    from {
+        height: 0rem;
+        width: 0rem;
+    }
+
+    to {
+        height: 18.6rem;
+        width: 38.5rem;
+    }
+}
+
+@keyframes exit {
+
+    from {
+        height: 18.6rem;
+        width: 38.5rem;
+    }
+
+    to {
+        height: 0rem;
+        width: 0rem;
+    }
+}
+
+.Request-show {
+    animation-name: enter;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+.Request-hide {
+    animation-name: exit;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.text-container {
+
+    background-color: whitesmoke;
+    margin-top: 3%;
+    margin-left: 3%;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}

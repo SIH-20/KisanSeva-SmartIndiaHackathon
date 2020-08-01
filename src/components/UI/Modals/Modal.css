@@ -1,0 +1,34 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color:white;
+    width: 78%;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 7px;
+    padding-top: 43px;
+    left: 20%;
+    transition: all 0.3s ease-out;
+}
+
+.ModalOpen {
+    /* display: block; */
+    top: 11%;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ModalClosed {
+    /* display: none; */
+    top: -11%;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+
+/* @media (min-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+} */
