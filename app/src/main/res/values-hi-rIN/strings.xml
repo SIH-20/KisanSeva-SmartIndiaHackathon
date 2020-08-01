@@ -889,4 +889,6 @@
     <string name="rice">चावल</string>
     <string name="predicted_price">(40–50 रु।)/किलो</string>
     <string name="price_filling_toast">मूल्य सीमा, आप खरीदारों से पूछ सकते हैं, भरा हुआ है</string>
+    <string name="negotiated_price">मोलभाव वाला मूल्य</string>
+    <string name="negotiated_prices">खरीदारों द्वारा बातचीत की गई कीमतें</string>
 </resources>

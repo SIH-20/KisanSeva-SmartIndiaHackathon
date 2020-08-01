@@ -11,6 +11,10 @@
         android:icon="@drawable/ic_order"
         android:title="@string/orders" />
     <item
+        android:id="@+id/nav_negotiate"
+        android:icon="@drawable/ic_contract"
+        android:title="@string/negotiated_price" />
+    <item
         android:id="@+id/nav_lang"
         android:icon="@drawable/ic_language"
         android:title="@string/change_language" />

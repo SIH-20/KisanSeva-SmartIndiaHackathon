@@ -884,5 +884,7 @@
     <string name="vegetable" translatable="false">vegetable</string>
     <string name="grain" translatable="false">grain</string>
     <string name="fruit" translatable="false">fruit</string>
+    <string name="negotiated_price">Negotiated Price</string>
+    <string name="negotiated_prices">Negotiated Prices by Buyers</string>
 </resources>
 

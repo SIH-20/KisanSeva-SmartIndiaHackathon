@@ -13,15 +13,14 @@
         android:roundIcon="@drawable/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".activities.OrderDetailsActivity" />
-        <activity
-            android:name=".activities.QualityTestResultActivity" />
+        <activity android:name=".activities.WalletSectionActivity"></activity>
+        <activity android:name=".activities.NegotiatedActivity" />
+        <activity android:name=".activities.OrderDetailsActivity" />
+        <activity android:name=".activities.QualityTestResultActivity" />
         <activity
             android:name=".activities.LogisticsInfoActivity"
             android:label="Logistics Solution" />
-        <activity
-            android:name=".activities.OrdersInfoActivity" />
+        <activity android:name=".activities.OrdersInfoActivity" />
         <activity
             android:name=".activities.InventoryItemDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />

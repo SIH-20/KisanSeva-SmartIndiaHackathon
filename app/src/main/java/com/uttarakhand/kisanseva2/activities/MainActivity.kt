@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_quality -> Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show()
             R.id.nav_lang -> changeLanguage()
             R.id.nav_orders -> startActivity(Intent(this, OrdersInfoActivity::class.java))
+            R.id.nav_negotiate -> startActivity(Intent(this, NegotiatedActivity::class.java))
             R.id.nav_weather -> startActivity(Intent(this, WeatherActivity::class.java))
             R.id.nav_signout -> {
                 FirebaseAuth.getInstance().signOut()
