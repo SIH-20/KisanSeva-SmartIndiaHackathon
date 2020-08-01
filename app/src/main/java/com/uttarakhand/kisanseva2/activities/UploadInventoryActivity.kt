@@ -11,10 +11,13 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.webkit.MimeTypeMap
+import android.widget.ArrayAdapter
 import android.widget.ProgressBar
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -27,6 +30,7 @@ import com.uttarakhand.kisanseva2.model.uploadItem.ItemUploadInventory
 import com.uttarakhand.kisanseva2.network.APIs
 import com.uttarakhand.kisanseva2.network.RetrofitClientInstance
 import kotlinx.android.synthetic.main.activity_upload_inventory.*
+import kotlinx.android.synthetic.main.fragment_quality_testing.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,6 +40,7 @@ class UploadInventoryActivity : AppCompatActivity() {
     private val GALLERY_CODE = 1
     private var imageSelected: Boolean = false
     private val qualities = arrayOf<String?>("Elite", "Premium", "Classic")
+    private val type = arrayOf<String?>("Select type", "vegetable", "grain", "fruit")
 
     private var mProgressBar: ProgressBar? = null
     private var mImageUri: Uri? = null
@@ -52,6 +57,16 @@ class UploadInventoryActivity : AppCompatActivity() {
         colToolbar.setExpandedTitleColor(Color.TRANSPARENT)
         toolbar.setNavigationOnClickListener { v1: View? -> finish() }
         val appBarLayout: AppBarLayout = findViewById(R.id.app_bar_layout)
+
+        //spinner
+        val spin = findViewById<View>(R.id.spinner_type) as Spinner
+//        spin.onItemSelectedListener = this
+        //Creating the ArrayAdapter instance having the country list
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, type)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        //Setting the ArrayAdapter data on the Spinner
+        spin.adapter = aa
+
         appBarLayout.addOnOffsetChangedListener(OnOffsetChangedListener { appBarLayout1: AppBarLayout, verticalOffset: Int ->
             if (Math.abs(verticalOffset) == appBarLayout1.totalScrollRange) {
                 // If collapsed, then do this
@@ -89,7 +104,9 @@ class UploadInventoryActivity : AppCompatActivity() {
         } else if (etPriceIn.text!!.toString() == "") {
             etPrice.error = "Add price of item per Kg"
             etPrice.requestFocus()
-        } else if (etDescriptionIn.text!!.toString().equals("")) {
+        } else if (spinner_type.selectedItem.toString() == getString(R.string.select_type)) {
+            Toast.makeText(this, "Select a Type", Toast.LENGTH_SHORT).show()
+        } else if (etDescriptionIn.text!!.toString() == "") {
             etDescription.error = "Add a small description of item"
             etDescription.requestFocus()
         } else {
@@ -145,6 +162,7 @@ class UploadInventoryActivity : AppCompatActivity() {
                         uri.toString(),
                         etNameIn.text!!.toString(),
                         etDescriptionIn.text!!.toString(),
+                        spinner_type.selectedItem.toString(),
                         etQualityIn.text!!.toString(),
                         etQuantityIn.text!!.toString(),
                         etPriceIn.text!!.toString(),
@@ -153,7 +171,7 @@ class UploadInventoryActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<ItemUploadInventory>, t: Throwable) {
                         Toast.makeText(this@UploadInventoryActivity, t.message, Toast.LENGTH_SHORT).show()
                         Log.d("ItemUploadFail", t.message!!)
-                       removeLoading()
+                        removeLoading()
                     }
 
                     override fun onResponse(call: Call<ItemUploadInventory>, response: Response<ItemUploadInventory>) {
@@ -167,11 +185,13 @@ class UploadInventoryActivity : AppCompatActivity() {
                     }
                 })
     }
-    private fun removeLoading(){
+
+    private fun removeLoading() {
         btnUploadItem.visibility = View.VISIBLE
         progress_bar.visibility = View.GONE
     }
-    private fun addLoading(){
+
+    private fun addLoading() {
         btnUploadItem.visibility = View.GONE
         progress_bar.visibility = View.VISIBLE
     }
@@ -196,6 +216,8 @@ class UploadInventoryActivity : AppCompatActivity() {
             handler.postDelayed({
                 ml.visibility = View.GONE
                 etQualityIn.setText(qualities[getRandomNumber(0, 3)])
+                etPriceIn.setText(getString(R.string.predicted_price))
+                Toast.makeText(this, getString(R.string.price_filling_toast), Toast.LENGTH_LONG).show()
                 imageSelected = true
             }, 4000)
         }

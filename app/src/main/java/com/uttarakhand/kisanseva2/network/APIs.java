@@ -45,6 +45,7 @@ public interface APIs {
     Call<ItemUploadInventory> uploadingItemInventory(@Field("image") String image,
                                                      @Field("item_name") String name,
                                                      @Field("description") String description,
+                                                     @Field("type") String type,
                                                      @Field("quality") String quality,
                                                      @Field("quantity") String quantity,
                                                      @Field("price") String price,
