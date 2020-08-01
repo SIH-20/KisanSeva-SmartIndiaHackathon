@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_quality"
+        android:icon="@drawable/ic_quality"
+        android:title="@string/testing_quality" />
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/ic_order"
+        android:title="@string/orders" />
+    <item
+        android:id="@+id/nav_lang"
+        android:icon="@drawable/ic_language"
+        android:title="@string/change_language" />
+    <item
+        android:id="@+id/nav_weather"
+        android:icon="@drawable/ic_weather"
+        android:title="@string/weather" />
+    <item
+        android:id="@+id/nav_signout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/sign_out" />
+</menu>
