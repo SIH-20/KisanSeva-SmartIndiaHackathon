@@ -21,11 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
-        android:text="₹ 2034"
+        android:text="₹ 0000"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +35,15 @@
         android:id="@+id/cl_statement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:orientation="horizontal"
         android:paddingStart="15sp"
         android:paddingEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/tvBalance">
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,8 +94,10 @@
         app:layout_constraintTop_toBottomOf="@id/view" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransactions"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tr" />

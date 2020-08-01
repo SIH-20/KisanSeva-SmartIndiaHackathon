@@ -887,8 +887,9 @@
     <string name="negotiated_price">Negotiated Price</string>
     <string name="negotiated_prices">Negotiated Prices by Buyers</string>
     <string name="recents_transactions">Recents Transactions</string>
-    <string name="available_balance">Available Balance</string>
+    <string name="available_balance">Earning from Crop selling</string>
     <string name="request_statement">Request Statement</string>
     <string name="send_money_to_bank">Send Money to Bank</string>
+    <string name="earning">Your Earning</string>
 </resources>
 
