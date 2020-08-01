@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingTop="10dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/transaction_icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
