@@ -1,8 +1,8 @@
 import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Header, Footer, Sidebar } from "components";
-import dashboardRoutes from "routes/dashboard.jsx";
+import { Header, Footer, Sidebar } from "../../components/index";
+import dashboardRoutes from "../../routes/dashboard.jsx";
 import "react-chat-widget/lib/styles.css";
 var ps;
 class Dashboard extends React.Component {

@@ -17,7 +17,7 @@ import {
 } from "reactstrap";
 import Autocomplete from "react-autocomplete";
 import { ToastContainer} from "react-toastify";
-import dashboardRoutes from "routes/dashboard.jsx";
+import dashboardRoutes from "../../routes/dashboard";
 class Header extends React.Component {
   constructor(props) {
     super(props);

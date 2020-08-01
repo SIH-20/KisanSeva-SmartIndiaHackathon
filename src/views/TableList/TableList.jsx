@@ -11,7 +11,7 @@ import { Table } from "react-bootstrap";
 import Loader from "react-loader-spinner";
 import PanelHeader from "../../layouts/PanelHeader/PanelHeader"
 import { Link } from "react-router-dom";
-import { thead } from "variables/general";
+import { thead } from "../../variables/general";
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import { connect } from "react-redux"
