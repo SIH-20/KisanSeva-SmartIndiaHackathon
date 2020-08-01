@@ -1,0 +1,374 @@
+<!-- Hero Section Begin -->
+<iframe src="https://agmarknet.gov.in/agnew/namticker.aspx" style="width:100%;height:73px;border:none;"></iframe>
+<section class="hero-section">
+    <div id="root">
+
+    </div>
+    <div class="hero-items owl-carousel">
+        <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <!-- <span>Bag,kids</span> -->
+                        <div class="off-card">
+                            <h2>Sale <span>50%</span></h2>
+                        </div>
+                        <h1>Flash sale</h1>
+                        <p>Fresh farm products straight out of field at your fingertips at most reasonable prices ever
+                        </p>
+                        <button onclick="window.location.href='/order/buy_product/5f017194ead31327a4a186bf'"
+                            class="btn primary-btn" type="button" data-toggle="collapse" data-target="#user-chat-box"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Buy Now
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="img/hero-2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="off-card">
+                            <h2>Sale <span>50%</span></h2>
+                        </div>
+                        <!-- <span>Bag,kids</span> -->
+                        <h1>Flash sale</h1>
+                        <p>Fresh farm products straight out of field at your fingertips at most reasonable prices ever
+                        </p>
+                        <button class="btn primary-btn"
+                            onclick="window.location.href='/order/buy_product/5f017167ead31327a4a186bd'" type="button"
+                            data-toggle="collapse" data-target="#user-chat-box" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            Buy Now
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="img/hero-3.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <!-- <span>Bag,kids</span> -->
+                        <div class="off-card">
+                            <h2>Sale <span>50%</span></h2>
+                        </div>
+                        <h1>Flash sale</h1>
+                        <p>Fresh farm products straight out of field at your fingertips at most reasonable prices ever
+                        </p>
+                        <button class="btn primary-btn" type="button"
+                            onclick="window.location.href='/order/buy_product/5efb8c937a290e6f5b45758d'"
+                            data-toggle="collapse" data-target="#user-chat-box" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Banner Section Begin -->
+<div class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="img/banner-1.jpg" alt="">
+                    <a href="/shop?type=vegetable">
+                        <div class="inner-text">
+                            <h4> Vegetables</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="img/banner-3.jpg" alt="">
+                    <a href="/shop?type=grain">
+                        <div class="inner-text">
+                            <h4>Grains</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-banner">
+                    <img src="img/banner-2.jpg" alt="">
+                    <a href="/shop?type=fruit">
+                        <div class="inner-text">
+                            <h4>Fruits</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Section End -->
+<section class="women-banner spad">
+    <div class="container-fluid">
+    <div class="banner-section mt-2 pt-0" style="text-align: center;">
+        <div class="row"
+            style="background-color: #FEE140;
+    background-image: linear-gradient(to bottom right, #f8f8f0 100%, #e7ab3c 0%); box-shadow:0px 0px 20px 8px  #f8f8f0;">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="inner-text mt-lg-5">
+                    <h3>
+                        <ul>Grains</ul>
+                    </h3><br>
+                </div>
+                <!-- putting it here -->
+                <br>
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <div id="cereals-slider" class="product-slider owl-carousel">
+                            <%for(let item of cereals){%>
+                            <div class="product-item">
+                                <div style="background-image: url('<%=item.image%>')" class="pi-pic uploaded-items">
+
+                                    <div class="sale">Sale</div>
+
+                                    <ul>
+                                        <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                        <li class="quick-view"><a href="/order/buy_product/<%=item._id%>">Buy</a></li>
+                                        <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <%}%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+
+<!-- Man Banner Section Begin -->
+<section class="women-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+
+
+
+            <section class="slideshow">
+                <div class="content">
+                    <div class="content-carrousel">
+                        <figure class="shadow"><img src="img/broccli.jpg"></figure>
+                        <figure class="shadow"><img src="img/capsicum.jpg"></figure>
+                        <figure class="shadow"><img src="img/dragon.jpg"></figure>
+                        <figure class="shadow"><img src="img/kiwi2.jpg"></figure>
+                        <figure class="shadow"><img src="img/jackfruit.jpg"></figure>
+                        <figure class="shadow"><img src="img/lettuce.jpg"></figure>
+                        <figure class="shadow"><img src="img/babycorn.jpg"></figure>
+                        <figure class="shadow"><img src="img/mangoes.jpg"></figure>
+                        <figure class="shadow"><img src="img/mangooseteen.jpg"></figure>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- putting it here  -->
+            <div class="col-lg-3 offset-lg-1" id="side-image">
+                <div class="product-large set-bg " data-setbg="/img/vege-large.jpg">
+                    <h2>Farm Fresh</h2>
+                    <a href="#">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="latest-blog spad">
+    <div class="container">
+
+    <section>
+    <div class="banner-section mt-2 pt-0" style="text-align: center;position: relative;left: -99px;width: 118%;">
+        <div class="row" style="background-color: #FEE140;
+    background-image: linear-gradient(to bottom right, #f8f8f0 100%, #e7ab3c 0%); box-shadow:0px 0px 20px 8px  #f8f8f0;">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="inner-text mt-lg-5">
+                    <h3>Fruits</h3>
+                </div>
+                <br>
+                <!-- putting it here -->
+
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <div id= "fruits-slider" class="product-slider owl-carousel">
+                            <%for(let item of fruits){%>
+                            <div class="product-item">
+                                <div style="background-image: url('<%=item.image%>')" class="pi-pic uploaded-items">
+
+                                    <div class="sale">Sale</div>
+
+                                    <ul>
+                                        <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                        <li class="quick-view"><a href="/order/buy_product/<%=item._id%>">Buy</a></li>
+                                        <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <%}%>
+                        </div>
+                    </div>
+                </div>
+
+         
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+        <section class="deal-of-week set-bg spad" data-setbg="img/kiwi.jpg">
+            <div class="container">
+                <div class="col-lg-6 text-center offset-lg-8">
+                    <div class="section-title">
+                        <h2>Deal Of The Week</h2>
+                        <p>Fresh farm products straight out of field at your fingertips at most reasonable prices ever </p>
+                        <div class="product-price">
+                            Rs 35.00
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="cd-item">
+                            <span>56</span>
+                            <p>Days</p>
+                        </div>
+                        <div class="cd-item">
+                            <span>12</span>
+                            <p>Hrs</p>
+                        </div>
+                        <div class="cd-item">
+                            <span>40</span>
+                            <p>Mins</p>
+                        </div>
+                        <div class="cd-item">
+                            <span>52</span>
+                            <p>Secs</p>
+                        </div>
+                    </div>
+                    <a href="/order/buy_product/5f017259ead31327a4a186c1" class="primary-btn">Shop Now</a>
+                </div>
+            </div>
+        </section>
+        <!-- Deal Of The Week Section End -->
+        <section class="latest-blog spad">
+            <div class="container">
+        
+            <section>
+            <div class="banner-section mt-2 pt-0" style="text-align: center;position: relative;left: -99px;width: 118%;">
+                <div class="row" style="background-color: #FEE140;
+            background-image: linear-gradient(to bottom right, #f8f8f0 100%, #e7ab3c 0%); box-shadow:0px 0px 20px 8px  #f8f8f0;">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="inner-text mt-lg-5">
+                            <h3>Vegetables</h3>
+                        </div>
+                        <br>
+                        <!-- putting it here -->
+        
+                        <div class="row">
+                            <div class="col d-flex align-items-center">
+                                <div id="vegetables-slider"  class="product-slider owl-carousel">
+                                    <%for(let item of vegetables){%>
+                                    <div class="product-item">
+                                        <div style="background-image: url('<%=item.image%>')" class="pi-pic uploaded-items">
+        
+                                            <div class="sale">Sale</div>
+        
+                                            <ul>
+                                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                                <li class="quick-view"><a href="/order/buy_product/<%=item._id%>">Buy</a></li>
+                                                <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                            </ul>
+                                        </div>
+        
+        
+        
+                                    </div>
+        
+        
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+        
+                 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="benefit-items">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="img/icon-1.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Free Shipping</h6>
+                            <p>For all orders over Rs.1000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="img/icon-2.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Delivery On Time</h6>
+                            <p>Dedicated to provide products on time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="img/icon-1.png" alt="">
+                        </div>
+                        <div class="sb-text">
+                            <h6>Secure Payment</h6>
+                            <p>100% secure payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script>
+    $(window).resize(function () {
+
+        if ($(document).width() <= 500) {
+
+            $('#side-image').hide();
+        } else {
+            $('#side-image').show();
+        }
+    });
+</script>
+<!-- Latest Blog Section End -->

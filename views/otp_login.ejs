@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+<link rel="stylesheet" type="text/css" href="/css/otp_login.css">
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('/login/images/bg-01.jpg');">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form" action="/users/submit-number" method="POST">
+                <span class="login100-form-logo">
+                    <img src="/login/images/icons/logo.png">
+					</span>
+
+                <span class="login100-form-title p-b-34 p-t-27">
+						Enter your phone number
+					</span>
+
+
+                <div class="wrap-input100s">
+                    <input class="input100" type="text" name="email" placeholder="Registered Phone Number">
+                    <input type="hidden" name="password" value="*****" id="password">
+                    <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+							Submit
+						</button>
+                </div>
+
+                <div class="text-center p-t-90">
+                    <a class="txt1" src="/login/#">
+							Forgot Password?
+						</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/login/js/otp_login.js"></script>

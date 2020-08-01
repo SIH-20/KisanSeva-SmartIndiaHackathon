@@ -1,0 +1,17 @@
+<div id="wrapper">
+    <div id="dialog">
+        <!-- <button class="close">×</button> -->
+        <h3>Please enter the 4-digit verification code we sent via SMS:</h3>
+        <span>(It will expire within 5 mins)</span>
+        <div id="form">
+            <form action="/users/login/submit-otp" method="post">
+                <input type="text" maxLength="1" name="first" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" maxLength="1" size="1" min="0" name="second" max="9" pattern="[0-9]{1}" /><input type="text" maxLength="1" size="1" min="0" max="9" name="third" pattern="[0-9]{1}" /><input type="text" maxLength="1" size="1" min="0"
+                    max="9" name="fourth" pattern="[0-9]{1}" />
+                <button type="submit" class="btn btn-primary btn-embossed">Verify</button>
+            </form>
+        </div>
+
+        <img src="http://jira.moovooz.com/secure/attachment/10424/VmVyaWZpY2F0aW9uLnN2Zw==" alt="test" />
+    </div>
+</div>
