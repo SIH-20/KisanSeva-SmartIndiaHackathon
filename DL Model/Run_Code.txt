@@ -1,0 +1,9 @@
+a) Create Virtual env - "https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/" 
+	use above link to install env in python2 
+b) Run the requirment.txt file 
+    pip install -r requirements.txt
+
+c) Run the code 
+	python2 cmd_wheat_quality_detector_v2.py
+d) enter the location of image
+	Test.jpg
