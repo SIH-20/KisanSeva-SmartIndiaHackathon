@@ -52,4 +52,7 @@ public interface APIs {
                                                      @Field("category") String category);
     @GET("api/mobile/farmer/allOrders")
     Call<AllOrders> getAllOrders();
+
+    @GET("api/mobile/farmer/negotiation")
+    Call<JsonObject> getAllNegotiations();
 }

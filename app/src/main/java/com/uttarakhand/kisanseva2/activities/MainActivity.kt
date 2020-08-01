@@ -19,6 +19,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.uttarakhand.kisanseva2.R
+import com.uttarakhand.kisanseva2.activities.inventoryManagement.OrdersInfoActivity
 import com.uttarakhand.kisanseva2.fragments.*
 import java.util.*
 

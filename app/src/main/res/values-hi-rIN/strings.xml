@@ -891,4 +891,8 @@
     <string name="price_filling_toast">मूल्य सीमा, आप खरीदारों से पूछ सकते हैं, भरा हुआ है</string>
     <string name="negotiated_price">मोलभाव वाला मूल्य</string>
     <string name="negotiated_prices">खरीदारों द्वारा बातचीत की गई कीमतें</string>
+    <string name="recents_transactions">लेन-देन</string>
+    <string name="available_balance">उपलब्ध शेष राशि</string>
+    <string name="request_statement">अनुरोध विवरण</string>
+    <string name="send_money_to_bank">बैंक को पैसा भेजें</string>
 </resources>

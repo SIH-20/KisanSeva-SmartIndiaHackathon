@@ -15,17 +15,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.WalletSectionActivity"></activity>
         <activity android:name=".activities.NegotiatedActivity" />
-        <activity android:name=".activities.OrderDetailsActivity" />
+        <activity android:name=".activities.inventoryManagement.OrderDetailsActivity" />
         <activity android:name=".activities.QualityTestResultActivity" />
         <activity
             android:name=".activities.LogisticsInfoActivity"
             android:label="Logistics Solution" />
-        <activity android:name=".activities.OrdersInfoActivity" />
+        <activity android:name=".activities.inventoryManagement.OrdersInfoActivity" />
         <activity
-            android:name=".activities.InventoryItemDetailsActivity"
+            android:name=".activities.inventoryManagement.InventoryItemDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.UploadInventoryActivity"
+            android:name=".activities.inventoryManagement.UploadInventoryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.WeatherActivity"

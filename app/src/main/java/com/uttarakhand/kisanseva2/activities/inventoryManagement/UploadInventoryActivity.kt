@@ -1,4 +1,4 @@
-package com.uttarakhand.kisanseva2.activities
+package com.uttarakhand.kisanseva2.activities.inventoryManagement
 
 import android.Manifest
 import android.app.Activity
@@ -17,7 +17,6 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -26,11 +25,11 @@ import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.StorageTask
 import com.squareup.picasso.Picasso
 import com.uttarakhand.kisanseva2.R
+import com.uttarakhand.kisanseva2.activities.MainActivity
 import com.uttarakhand.kisanseva2.model.uploadItem.ItemUploadInventory
 import com.uttarakhand.kisanseva2.network.APIs
 import com.uttarakhand.kisanseva2.network.RetrofitClientInstance
 import kotlinx.android.synthetic.main.activity_upload_inventory.*
-import kotlinx.android.synthetic.main.fragment_quality_testing.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

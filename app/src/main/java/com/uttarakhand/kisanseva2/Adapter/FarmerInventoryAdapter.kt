@@ -8,13 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.uttarakhand.kisanseva2.R
-import com.uttarakhand.kisanseva2.activities.InventoryItemDetailsActivity
+import com.uttarakhand.kisanseva2.activities.inventoryManagement.InventoryItemDetailsActivity
 import com.uttarakhand.kisanseva2.model.FarmerInfo
 
 class FarmerInventoryAdapter(val infos: FarmerInfo,

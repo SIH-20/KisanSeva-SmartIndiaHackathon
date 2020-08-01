@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.uttarakhand.kisanseva2.Adapter.FarmerInventoryAdapter
 import com.uttarakhand.kisanseva2.R
 import com.uttarakhand.kisanseva2.activities.LoginActivity
-import com.uttarakhand.kisanseva2.activities.UploadInventoryActivity
+import com.uttarakhand.kisanseva2.activities.inventoryManagement.UploadInventoryActivity
 import com.uttarakhand.kisanseva2.model.FarmerInfo
 import com.uttarakhand.kisanseva2.network.APIs
 import com.uttarakhand.kisanseva2.network.RetrofitClientInstance
