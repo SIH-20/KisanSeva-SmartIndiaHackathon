@@ -53,9 +53,7 @@ class WalletSectionActivity : AppCompatActivity() {
     private fun setBalance(body: AllOrders) {
         var totalBalance = 0;
         for (i in body.data) {
-            for (j in i.orderQuantity) {
-                totalBalance += j.price
-            }
+            totalBalance += i.amount
         }
         tvBalance.text = "₹ $totalBalance"
     }

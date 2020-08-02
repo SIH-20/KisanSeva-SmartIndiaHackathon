@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uttarakhand.kisanseva2.R
 import com.uttarakhand.kisanseva2.activities.MainActivity
 import com.uttarakhand.kisanseva2.activities.NegotiatedActivity
+import com.uttarakhand.kisanseva2.activities.generalInfo.SoilHealthActivity
 import com.uttarakhand.kisanseva2.activities.inventoryManagement.OrdersInfoActivity
 import com.uttarakhand.kisanseva2.model.SearchFeature
 import java.util.*
@@ -83,6 +84,10 @@ class SearchAdapter(private val searchFeatures: ArrayList<SearchFeature>,
             }
             "language" -> {
                 changeLanguage()
+            }
+            "soil" -> {
+                val i = Intent(this.context, SoilHealthActivity::class.java)
+                context.startActivity(i)
             }
         }
     }
