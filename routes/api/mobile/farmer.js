@@ -11,5 +11,6 @@ router.put('/update',farmerController.update);
 router.put('/updateItem',farmerController.updateItem);
 router.put('/delete',farmerController.deleteItem);
 router.get('/feedback',farmerController.feedback);
+router.get('/negotiation',farmerController.negotiations);
 
 module.exports = router;

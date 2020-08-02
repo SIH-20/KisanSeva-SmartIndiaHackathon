@@ -7,7 +7,7 @@ const Cart = require('../models/Cart');
 
 module.exports.getNegotiation = async (req, res) => {
     try {
-        let cart = await Negotiation.findOne({ buyer: req.user._id }).populate('item');
+        let cart = await Negotiation.find({$and: [{ buyer: req.user._id }, { status: false }]}).populate('item');
         if (cart) {
             return res.status(200).json({
                 data: cart,
@@ -131,7 +131,7 @@ module.exports.translator = async (req, res) => {
                             negotiation.farmer.name,
                             negotiation.item.title
                         );
-                        //  translator(farmerString, negotiation.farmer.phone);
+                        translator(farmerString, negotiation.farmer.phone);
                         //send mssg for buyer
                         let buyerString = templates.buyerTemplateAgree(
                             negotiation.buyer.name,
@@ -165,7 +165,7 @@ module.exports.translator = async (req, res) => {
                                 negotiation.farmer.name,
                                 negotiation.item.title
                             );
-                            //  translator(farmerString, negotiation.farmer.phone);
+                            translator(farmerString, negotiation.farmer.phone);
                             //send mssg for buyer
                             let buyerString = templates.buyerTemplateAgree(
                                 negotiation.buyer.name,
@@ -195,7 +195,7 @@ module.exports.translator = async (req, res) => {
                                 negotiation.farmer.name,
                                 negotiation.item.title
                             );
-                            //  translator(farmerString, negotiation.farmer.phone);
+                            translator(farmerString, negotiation.farmer.phone);
                             //send mssg for buyer
                             let buyerString = templates.buyerTemplateAgree(
                                 negotiation.buyer.name,
@@ -205,12 +205,14 @@ module.exports.translator = async (req, res) => {
                         }
                     }
                 }
-                await Negotiation.deleteOne({ _id: negotiation._id });
+                negotiation.status = true;
+                await negotiation.save();
             } else if (answer == 2) {
-                await Negotiation.deleteOne({ _id: negotiation._id });
+                // await Negotiation.deleteOne({ _id: negotiation._id });
                 // Send sms to both buyer and farmer that negotion is ended without deciding the price
                 // The negotiation ended without any price change as one of them denied
-
+                negotiation.status = true;
+                await negotiation.save();
                 let farmerString = templates.end(negotiation.farmer.name);
                 let buyerString = templates.end(negotiation.buyer.name);
                 translator(farmerString, negotiation.farmer.phone);

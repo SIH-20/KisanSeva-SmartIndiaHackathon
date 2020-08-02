@@ -5,6 +5,7 @@ const Category = require('../../../models/Category');
 const Farmer = require('../../../models/Farmer');
 const Transaction = require('../../../models/transaction');
 const Feedback = require('../../../models/Feedback');
+const Negotiation = require('../../../models/negotiations');
 
 module.exports.info = async (req, res) => {
     try {
@@ -190,6 +191,21 @@ module.exports.feedback = async (req, res) => {
         return res.status(200).json({
             message: 'Feedback Received',
             data: feedbacks
+        })
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            message: 'Internal Server Error'
+        })
+    }
+}
+
+module.exports.negotiations = async (req, res) => {
+    try {
+        let negotiation = await Negotiation.find({ farmer: req.user._id }).populate({ path: 'buyer', select: 'first_name phone address -_id' }).populate({ path: 'item', select: 'title price quality image' });
+        return res.status(200).json({
+            message: 'Data Retrived sucessfully',
+            data: negotiation
         })
     } catch (err) {
         console.log(err);
