@@ -67,8 +67,9 @@ let addSeller = (data) => {
     <div class="avatar-text">
         <div class="at-rating" id="rating-${data._id}" data-rating=${4}>
         </div>
-        <h5>${data.farmer.name}<span>${data.createdAt}</span></h5>
+        <h5>${data.farmer.name}<div style="display:inline"><p data-toggle="tooltip" data-placement="top" title="Verified by Farmer" style="color:#019AE9;display:inline"><i class="fas fa-check-circle"></i></p>  <p data-toggle="tooltip" data-placement="top" title="Verified by Logistics" style="color:#57B647;display:inline"><i class="fas fa-check-circle"></i></p></div></h5>
         <div class="at-reply">${data.description}</div>
+        <br/><p style="font-size:80%">uploaded on- ${data.createdAt.split("T")[0]}</p>
     </div>
 </div>`)
 }
