@@ -23,7 +23,6 @@ import com.uttarakhand.kisanseva2.activities.inventoryManagement.OrdersInfoActiv
 import com.uttarakhand.kisanseva2.fragments.*
 import java.util.*
 
-
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private var firebaseAuth: FirebaseAuth? = null
     private val mDatabase: DatabaseReference? = null
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         if (selectedFragment != null) {
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                    selectedFragment).commit()
+                    selectedFragment).addToBackStack("null").commit()
         }
         true
     }
@@ -71,8 +70,34 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer!!.addDrawerListener(toggle)
         toggle.syncState()
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                    HomeFragment()).commit()
+            if (intent.extras != null) {
+                when {
+                    intent.extras!!.getString("open", "inventory") == "inventory" -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                                HomeFragment()).addToBackStack("null").commit()
+                    }
+                    intent.extras!!.getString("open", "inventory") == "information" -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                                InformationFragment()).addToBackStack("null").commit()
+                    }
+                    intent.extras!!.getString("open", "inventory") == "quality" -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                                QualityTesting()).addToBackStack("null").commit()
+                    }
+                    intent.extras!!.getString("open", "inventory") == "chat" -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                                ChatFragment()).addToBackStack("null").commit()
+                    }
+                    intent.extras!!.getString("open", "inventory") == "profile" -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                                ProfileFragment()).addToBackStack("null").commit()
+                    }
+                }
+            } else {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        HomeFragment()).addToBackStack("null").commit()
+
+            }
         }
     }
 
@@ -82,6 +107,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_search -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        SearchFragment()).addToBackStack("null").commit()
+                return true
+            }
+            R.id.action_filter -> {
+                return true
+            }
+        }
         return super.onOptionsItemSelected(item)
     }
 
@@ -131,10 +166,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
-        if (drawer!!.isDrawerOpen(GravityCompat.START)) {
-            drawer!!.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
+        when {
+            drawer!!.isDrawerOpen(GravityCompat.START) -> {
+                drawer!!.closeDrawer(GravityCompat.START)
+            }
+            supportFragmentManager.backStackEntryCount > 0 -> {
+                supportFragmentManager.popBackStack()
+            }
+            else -> {
+                super.onBackPressed()
+            }
         }
     }
 

@@ -891,5 +891,7 @@
     <string name="request_statement">Request Statement</string>
     <string name="send_money_to_bank">Send Money to Bank</string>
     <string name="earning">Your Earning</string>
+    <string name="reach_buyer">Reach Buyer</string>
+    <string name="call">Call</string>
 </resources>
 

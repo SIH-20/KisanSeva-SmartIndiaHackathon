@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.uttarakhand.kisanseva2.R
 import com.uttarakhand.kisanseva2.model.Item
+import kotlinx.android.synthetic.main.activity_upload_inventory.*
 import kotlinx.android.synthetic.main.fragment_item_info.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -41,8 +42,53 @@ class ItemInfoFragment(private val item: Item?) : Fragment() {
         v.etDescriptionIn.setText(item.description)
         if (item.image.substring(0, 4) == "http") Glide.with(requireContext()).load(item.image).into(v.item_image)
         else Glide.with(requireContext()).load("https://buyfreshdtu.xyz" + item.image).into(v.item_image)
-
+        v.btnEditDetails.setOnClickListener { editDetails(item) }
         return v
+    }
+
+    private fun editDetails(item: Item) {
+        if (etNameIn.text.toString() == "") {
+            etName.error = "Add Item Name"
+            etName.requestFocus()
+        } else if (etCategoryIn.text!!.toString() == "") {
+            etCategory.error = "Add Category"
+            etCategory.requestFocus()
+        } else if (etQualityIn.text!!.toString() == "") {
+            etQuality.error = "Add Quality"
+            etQuality.requestFocus()
+        } else if (etQuantityIn.text!!.toString() == "") {
+            etQuantity.error = "Add Quantity Available"
+            etQuantity.requestFocus()
+        } else if (etPriceIn.text!!.toString() == "") {
+            etPrice.error = "Add price of item per Kg"
+            etPrice.requestFocus()
+        } else if (etDescriptionIn.text!!.toString() == "") {
+            etDescription.error = "Add a small description of item"
+            etDescription.requestFocus()
+        } else {
+            //Upload
+            editDetailsOnDb(item)
+        }
+    }
+
+    private fun editDetailsOnDb(item: Item) {
+        //item id is not available to send in edit API
+//        RetrofitClientInstance.getRetrofit(context)
+//                ?.create<APIs>()
+//                ?.editDetails()
+//                ?.enqueue(object : Callback<JsonObject> {
+//                    override fun onFailure(call: Call<JsonObject>, t: Throwable) {
+//                        Toast.makeText(context, t.message, Toast.LENGTH_SHORT).show()
+//                        Log.d("EditDetailFail", t.message!!)
+//                    }
+//
+//                    override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+//                        Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show()
+//                        Log.d("EditDetailSuccess", response.body()!!.toString())
+//
+//                    }
+//
+//                })
     }
 
 

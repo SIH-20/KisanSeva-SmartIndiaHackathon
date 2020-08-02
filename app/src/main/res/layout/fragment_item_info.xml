@@ -230,7 +230,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnUploadItem"
+                android:id="@+id/btnEditDetails"
                 style="@style/ButtonFilled"
                 android:layout_width="0dp"
                 android:layout_height="0sp"

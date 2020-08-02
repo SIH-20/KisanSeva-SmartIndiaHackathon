@@ -24,6 +24,9 @@ class WalletSectionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_wallet_section)
         supportActionBar!!.title = getString(R.string.earning)
         initData()
+        swipe_wallet.setOnRefreshListener {
+            initData()
+        }
     }
 
     private fun initData() {
@@ -34,12 +37,14 @@ class WalletSectionActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<AllOrders>, t: Throwable) {
                         Log.d("WalletError", t.message.toString())
                         Toast.makeText(this@WalletSectionActivity, t.message, Toast.LENGTH_SHORT).show()
+                        swipe_wallet.isRefreshing = false
                     }
 
                     override fun onResponse(call: Call<AllOrders>, response: Response<AllOrders>) {
                         Log.d("WalletResponse", response.body()!!.toString())
                         initRecycler(response.body()!!)
                         setBalance(response.body()!!)
+                        swipe_wallet.isRefreshing = false
                     }
                 })
     }

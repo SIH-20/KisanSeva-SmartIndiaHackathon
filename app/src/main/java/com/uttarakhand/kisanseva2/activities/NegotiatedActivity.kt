@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.JsonObject
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.uttarakhand.kisanseva2.Adapter.NegotiatedAdapter
 import com.uttarakhand.kisanseva2.R
+import com.uttarakhand.kisanseva2.model.negotiation.Negotiation
 import com.uttarakhand.kisanseva2.network.APIs
 import com.uttarakhand.kisanseva2.network.RetrofitClientInstance
+import kotlinx.android.synthetic.main.activity_negotiated.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,15 +28,17 @@ class NegotiatedActivity : AppCompatActivity() {
         RetrofitClientInstance.getRetrofit(this)
                 ?.create<APIs>()
                 ?.allNegotiations
-                ?.enqueue(object : Callback<JsonObject> {
-                    override fun onFailure(call: Call<JsonObject>, t: Throwable) {
+                ?.enqueue(object : Callback<Negotiation> {
+                    override fun onFailure(call: Call<Negotiation>, t: Throwable) {
                         Toast.makeText(this@NegotiatedActivity, t.message, Toast.LENGTH_SHORT).show()
                         Log.d("NegoFail", t.message!!)
                     }
 
-                    override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+                    override fun onResponse(call: Call<Negotiation>, response: Response<Negotiation>) {
                         Toast.makeText(this@NegotiatedActivity, response.message(), Toast.LENGTH_SHORT).show()
                         Log.d("NegoSuccess", response.body()!!.toString())
+                        rvNegotiatedPrice.adapter = NegotiatedAdapter(response.body()!!, this@NegotiatedActivity)
+                        rvNegotiatedPrice.layoutManager = LinearLayoutManager(this@NegotiatedActivity)
                     }
                 })
     }

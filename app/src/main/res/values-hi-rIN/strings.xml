@@ -896,4 +896,6 @@
     <string name="request_statement">अनुरोध विवरण</string>
     <string name="send_money_to_bank">बैंक को पैसा भेजें</string>
     <string name="earning">आपकी कमाई</string>
+    <string name="reach_buyer">खरीदार तक पहुँचें</string>
+    <string name="call">कॉल</string>
 </resources>

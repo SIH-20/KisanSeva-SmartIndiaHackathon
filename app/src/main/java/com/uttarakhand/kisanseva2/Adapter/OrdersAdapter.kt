@@ -20,7 +20,7 @@ class OrdersAdapter(private val allOrders: AllOrders,
         RecyclerView.Adapter<OrdersAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val buyerName: TextView = itemView.findViewById(R.id.tvBuyerName)
-        val address: TextView = itemView.findViewById(R.id.tvAddress)
+        val address: TextView = itemView.findViewById(R.id.tvPhone)
         val date: TextView = itemView.findViewById(R.id.tvDate)
         val items: RecyclerView = itemView.findViewById(R.id.rvItemOrdered)
         val totalAmout: TextView = itemView.findViewById(R.id.tvAmount)
