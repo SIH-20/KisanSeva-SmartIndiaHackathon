@@ -1,0 +1,15 @@
+.land
+{
+    fill: #ECEFF1;
+    fill-opacity: 1;
+    stroke:#607D8B;
+    stroke-opacity: 1;
+    stroke-width:1px;
+}
+.mapdiv path{
+transition: fill 0.3s;
+}
+.land:hover{
+    fill: #607D8B;
+    fill-opacity: 0.8;
+}
