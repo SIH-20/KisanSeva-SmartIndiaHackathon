@@ -170,10 +170,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             drawer!!.isDrawerOpen(GravityCompat.START) -> {
                 drawer!!.closeDrawer(GravityCompat.START)
             }
-            supportFragmentManager.backStackEntryCount > 0 -> {
-                supportFragmentManager.popBackStack()
-            }
             else -> {
+                finish();
+                moveTaskToBack(true);
                 super.onBackPressed()
             }
         }

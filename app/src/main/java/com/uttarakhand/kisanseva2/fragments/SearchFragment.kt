@@ -48,7 +48,13 @@ class SearchFragment : Fragment() {
         searchOption.add(SearchFeature("Price Negotiation", R.drawable.ic_contract, "negotiate"))
         searchOption.add(SearchFeature("Change Language", R.drawable.ic_language, "language"))
         searchOption.add(SearchFeature("Soil Testing", R.drawable.ic_testing, "soil"))
-        searchOption.add(SearchFeature("Government Schemes", R.drawable.ic_government, "government"))
+        searchOption.add(SearchFeature("Schemes", R.drawable.ic_government, "government"))
+        searchOption.add(SearchFeature("Earnings", R.drawable.ic_wallet, "wallet"))
+        searchOption.add(SearchFeature("About Us", R.drawable.ic_user, "aboutus"))
+        searchOption.add(SearchFeature("Logistics", R.drawable.ic_logistics_search, "logistics"))
+        searchOption.add(SearchFeature("Weather", R.drawable.ic_weather, "weather"))
+
+
         v.rvSearch.adapter = SearchAdapter(searchOption, requireContext(), requireActivity())
         v.rvSearch.layoutManager = GridLayoutManager(context, 3)
         return v
