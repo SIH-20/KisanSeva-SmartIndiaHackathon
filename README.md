@@ -27,6 +27,8 @@ To run this project, Clone the project and run command "yarn" then "yarn start".
 We have implemented 3 things:
 1. Android app
 2. Web App
+   Ecommerce Portal - [buyfreshdtu.xyz](https://buyfreshdtu.xyz/)
+   Admin Portal - [admin.buyfreshdtu.xyz](https://admin.buyfreshdtu.xyz/)
 3. AI Model
 
 Thank you
