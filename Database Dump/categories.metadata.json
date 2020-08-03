@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"buyfresh.categories"},{"v":{"$numberInt":"2"},"unique":true,"key":{"name":{"$numberInt":"1"}},"name":"name_1","background":true,"ns":"buyfresh.categories"}],"uuid":"daa1365c547a4d00954ec31c046e68cd"}
