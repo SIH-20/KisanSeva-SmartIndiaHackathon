@@ -1,0 +1,49 @@
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-1">
+                <div class="contact-form">
+                    <div class="leave-comment">
+                        <h4>Upload Item to cart</h4>
+                        <form action="/upload-item" class="comment-form" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="file" id="item-image" name="item-image">
+                                </div>
+                                <div class="col-lg-12">
+                                    <select name="quality" id="quality">
+                                        <option value="Premium" selected>Premium</option>
+                                        <option value="Elite">Elite</option>
+                                        <option value="Classic">Classic</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" id="item-name" name="item_name" placeholder="Item-name">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" id="item-name" name="category" placeholder="category">
+                                </div>
+                                <div class="col-lg-6">
+                                    <textarea name="description"></textarea>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="number" id="item-quantity" name="quantity" placeholder="quantity">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" name="type" placeholder="type">
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="text" id="price" name="price" placeholder="price">
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <button type="submit" class="site-btn">Upload</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

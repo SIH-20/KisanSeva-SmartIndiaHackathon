@@ -1,0 +1,24 @@
+<div class="cart-hover">
+    <div class="select-items">
+        <table>
+            <tbody id="cart-table-body">
+            </tbody>
+        </table>
+    </div>
+    <div class="select-total">
+        <span>total:</span>
+        <h5 id="cart-total"></h5>
+    </div>
+    <div class="select-button">
+        <% if(locals.user && !locals.user.address){%>
+        <div class="discount-coupon">
+            <h6>Enter Address</h6>
+            <form action="/users/address" class="coupon-form" method="POST">
+                <input type="text" name="address" placeholder="Enter your Address">
+                <button type="submit" class="site-btn coupon-btn">Submit</button>
+            </form>
+        </div>
+        <%}%>
+        <a href="/order/checkout" class="primary-btn checkout-btn">CHECK OUT</a>
+    </div>
+</div>

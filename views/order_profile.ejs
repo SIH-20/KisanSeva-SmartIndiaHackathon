@@ -1,0 +1,89 @@
+<!-- Shopping Cart Section Begin -->
+<% var i = 0; %>
+<section class="shopping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cart-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th class="p-name">Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Feedback</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (items.length == 0){%>
+                            <tr colspan="5">
+                                <h3>No orders Placed Yet</h3>
+                            </tr>
+
+                            <%}else{ %>
+                            <% for (item in items){%>
+                            <tr>
+                                <td class="cart-pic first-row"><img src="<%= items[item].image %>" alt=""></td>
+                                <td class="cart-title first-row">
+                                    <h5><%= items[item].name %></h5>
+                                </td>
+                                <td class="p-price first-row"><%= items[item].price %></td>
+                                <td class="qua-col first-row">
+                                    <div class="quantity">
+                                        <%= items[item].quantity %>
+                                    </div>
+                                </td>
+                                <td class="total-price first-row"><%= items[item].price * items[item].quantity  %></td>
+                                <td>
+                                    <div class="faq-accordin">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                                <div class="card-heading">
+                                                    <a data-toggle="collapse"
+                                                        data-target="#collapseThree-<%= i %>">
+                                                        <h5>Open Form</h5>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseThree-<%= i++ %>" class="collapse"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="customer-review-option">
+                                                            <div class="leave-comment">
+                                                                <form action="/order/feedback/<%= items[item].id %>"
+                                                                    class="comment-form" method="POST">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-5">
+                                                                            <label>Rating</label>
+                                                                            <input id="item-quantity" type="number"
+                                                                                name="rating">
+                                                                        </div>
+                                                                        <div class="col-lg-12">
+                                                                            <textarea placeholder="Review"
+                                                                                name="content" required></textarea>
+                                                                            <button type="submit" class="site-btn">Send
+                                                                                Feedback</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <%}%>
+
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shopping Cart Section End -->
