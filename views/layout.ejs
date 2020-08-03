@@ -28,7 +28,6 @@
     <!-- Noty Notifications -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://kit.fontawesome.com/997cc280fa.js" crossorigin="anonymous"></script>
 </head>
 <!-- This is to prevent any pulling error -->
@@ -48,10 +47,7 @@
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=KEY"></script>
-    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=KEY"></script>
+
 </head>
 <!-- This is to prevent any pulling error -->
 
@@ -80,12 +76,9 @@
                 <div class="ht-right">
 
                     <% if(locals.user == undefined){%>
-
                     <a href="/users/login" class="login-panel"><i class="fa fa-user"></i>Login</a>
-
                     <%}else{%>
                     <a href="/users/logout" class="login-panel"><i class="fa fa-user"></i>Logout</a>
-
                     <%}%>
                     
                     <% if(locals.user == undefined){%>
@@ -300,7 +293,6 @@
     <script src="/ajax/negotiate-icon.js"></script>
     <script>
         <% if (success && success.length > 0) { %>
-
             new Noty({
                 theme: 'relax',
                 text: '<%= success %>',
@@ -308,10 +300,8 @@
                 layout: 'topRight',
                 timeout: 2000
             }).show();
-
             <% } %>
         <% if (error && error.length > 0) {%>
-
             new Noty({
                 theme: 'relax',
                 text: '<%= error %>',
@@ -319,7 +309,6 @@
                 layout: 'topRight',
                 timeout: 2000
             }).show();
-
             <% } %>
     </script>
     <%- script %>
@@ -328,7 +317,6 @@
                     new google.translate.TranslateElement({
                         pageLanguage: 'en'
                     }, 'google_translate_element');
-
                     document.getElementsByClassName("goog-logo-link")[0].innerHTML = "Buyfresh ML";
                     let dropDown = document.getElementsByClassName("goog-te-combo")[0];
                     dropDown.addEventListener("change", function (e) {
@@ -336,7 +324,6 @@
                         $.getScript('/ajax/speech.js').done(function(script,status){
                             console.log(status);
                         });
-
                     })
                     document.getElementsByClassName("goog-logo-link")[0].addEventListener("click", function (e) {
                         e.preventDefault();
@@ -364,7 +351,6 @@
             window.kommunicate = m;
             m._globals = kommunicateSettings;
         })(document, window.kommunicate || {});
-
         document.querySelectorAll('#cereals-slider .owl-stage-outer').forEach((element)=>{
             element.style.width = "129.8%",
             element.style.left = "-125px";
@@ -380,7 +366,6 @@
             element.style.left = "119px";
             element.style.paddingRight="259px"
         });
-
     </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="/ajax/speech.js"></script>

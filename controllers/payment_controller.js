@@ -74,11 +74,6 @@ router.get('/success', async function (req, res) {
     await Cart.deleteOne({ buyer: req.user._id });
     order.completed = true;
     await order.save();
-    var newblock = {
-        sessionId: req.query.session_id,
-        amount: parseInt(order.amount) + parseInt(req.query.deliveryCost)
-    }
-    block.newTransaction(newblock);
     const invoice = {
         shipping: {
             name: `${order.buyer.first_name} ${order.buyer.last_name}`,

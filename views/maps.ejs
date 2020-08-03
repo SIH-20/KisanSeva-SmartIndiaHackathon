@@ -1,3 +1,4 @@
+  
 <link rel="stylesheet" type="text/css" href="/css/cube.css">
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
@@ -140,14 +141,12 @@
             count: 9
         }]
     };
-
     var baseLayer = L.tileLayer(
         'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '...',
         maxZoom: 25
     }
     );
-
     var cfg = {
         // radius should be small ONLY if scaleRadius is true (or small radius is intended)
         // if scaleRadius is false it will be the constant radius used in pixels
@@ -166,13 +165,9 @@
         // which field name in your data represents the data value - default "value"
         valueField: 'count'
     };
-
-
     var heatmapLayer = new HeatmapOverlay(cfg);
-
     function showheatMapLayer(testData) {
         heatmapLayer.setData(testData);
-
     }
     showheatMapLayer(testData);
 </script>
@@ -180,7 +175,6 @@
     function changeHandling() {
         $('.js-example-responsive').change(function (e) {
             let crop = $(this).val();
-
             $.ajax({
                 type: "post",
                 url: "/maps/fetch-heatmap-data/crop",
@@ -194,14 +188,12 @@
                     };
                     console.log(testData);
                     showheatMapLayer(testData);
-
                 },
                 error: function (err) {
                     console.log(err);
                 }
             });
         });
-
     }
     changeHandling();
     var map = new L.Map('mapid', {
@@ -209,7 +201,6 @@
         zoom: 9,
         layers: [baseLayer, heatmapLayer]
     });
-
     // var greenIcon = L.icon({
     //     iconUrl: '/img/marker.png',
     //     iconSize: [38, 70], // size of the icon 

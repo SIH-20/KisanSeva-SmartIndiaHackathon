@@ -6,6 +6,8 @@ const Farmer = require('../../../models/Farmer');
 const Transaction = require('../../../models/transaction');
 const Feedback = require('../../../models/Feedback');
 const Negotiation = require('../../../models/negotiations');
+const Block = require('../../../models/Block');
+const Request = require('../../../models/requests');
 
 module.exports.info = async (req, res) => {
     try {
@@ -206,6 +208,60 @@ module.exports.negotiations = async (req, res) => {
         return res.status(200).json({
             message: 'Data Retrived sucessfully',
             data: negotiation
+        })
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            message: 'Internal Server Error'
+        })
+    }
+}
+
+
+module.exports.credit = async (req, res) => {
+    try {
+        let block = await Block.find().select();
+        return res.status(200).json({
+            message: 'BLocks for credit',
+            data: block
+        })
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            message: 'Internal Server Error'
+        })
+    }
+}
+
+module.exports.applyLoan = async (req, res) => {
+    try {
+        await Request.create({
+            farmer: req.user._id,
+            content: 'Apply for Loan',
+            category: req.body.credit,
+            crop: req.body.amount
+        })
+        return res.status(200).json({
+            message: 'Loan Applied Successfully'
+        })
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            message: 'Internal Server Error'
+        })
+    }
+}
+
+module.exports.greivance = async (req, res) => {
+    try {
+        await Request.create({
+            farmer: req.user._id,
+            content: req.body.content,
+            category: req.body.category,
+            crop: req.body.crop
+        })
+        return res.status(200).json({
+            message: 'Loan Applied Successfully'
         })
     } catch (err) {
         console.log(err);
