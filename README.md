@@ -12,3 +12,9 @@ We analyse the quality of rice by calculating the average length/breadth ratio f
 ![Output](https://github.com/hkedia321/rice-quality-analysis/blob/master/screenshots/images.png)
 
 ![Terminal](https://github.com/hkedia321/rice-quality-analysis/blob/master/screenshots/terminal.png)
+
+
+We have implemented 3 things:
+1. Android app
+2. Web App
+3. AI Model
