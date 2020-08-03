@@ -1,0 +1,175 @@
+<!-- Product Shop Section Begin -->
+<section class="product-shop spad page-details">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="product-pic-zoom">
+                                    <img class="product-big-img" src="<%=product.image%>" alt="">
+                                    <div class="zoom-icon">
+                                        <i class="fa fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="product-thumbs">
+                                    <div class="product-thumbs-track ps-slider owl-carousel">
+                                        <div class="pt active" data-imgbigurl="<%=product.image%>"><img
+                                                src="<%=product.image%>" alt=""></div>
+                                        <div class="pt" data-imgbigurl="<%=product.image%>"><img
+                                                src="<%=product.image%>" alt=""></div>
+                                        <div class="pt" data-imgbigurl="<%=product.image%>"><img
+                                                src="<%=product.image%>" alt=""></div>
+                                        <div class="pt" data-imgbigurl="<%=product.image%>g"><img
+                                                src="<%=product.image%>" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="product-details">
+                                    <div class="pd-title">
+                                        <h3><%=product.title%></h3>
+                                        <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
+                                    </div>
+                                    <div class="pd-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>(5)</span>
+                                    </div>
+                                    <div class="pd-desc">
+                                        <p><%=product.description%></p>
+                                        <h4>Rs.<%=product.price%><span>Rs.<%=product.price + 20 %></span></h4>
+                                    </div>
+                                    <div class="pd-size-choose">
+                                        <h5>Select Quality<span style="color: red;">*</span></h5><br>
+                                        <div class="sc-item">
+                                            <input type="radio">
+                                            <label for="sm-size" class='quality-selector' id="Premium"
+                                                data-quality="Premium"
+                                                data-category="<%= product.category %>">Premium</label>
+                                        </div>
+                                        <div class="sc-item">
+                                            <input type="radio">
+                                            <label for="md-size" class='quality-selector' data-quality="Elite"
+                                                data-category="<%= product.category %>">Elite</label>
+                                        </div>
+                                        <div class="sc-item">
+                                            <input type="radio">
+                                            <label for="lg-size" class='quality-selector' data-quality="Classic"
+                                                data-category="<%= product.category %>">Classic</label>
+                                        </div>
+                                    </div>
+                                    <h5>Quantity<span style="color: red;">*</span><span id="min-quat"></span></h5><br>
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input id="item-quantity" type="text" value="<%= quantity %>">
+                                        </div>
+                                        <a class="primary-btn pd-cart cart-toggler" id="item-<%=product._id%>"
+                                            href="#">Add To
+                                            Cart</a>
+                                    </div>
+                                    <h5>Negotiate Price (optional)</h5><br>
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input id="negotiate-amount" type="text" value="<%=product.price%>">
+                                        </div>
+                                        <a class="primary-btn pd-cart" data-item="<%=product._id%>" id="negotiate-btn"
+                                            href="#">Negotiate</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="product-tab">
+                            <div class="tab-item">
+                                <ul class="nav" role="tablist">
+                                    <li>
+                                        <a class="active" data-toggle="tab" href="#tab-1" role="tab">Sellers</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#tab-2" role="tab">SPECIFICATIONS</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#tab-3" role="tab">Customer Reviews</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-item-content">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
+                                        <div class="customer-review-option">
+                                            <h4><span id='number-of-sellers'></span> Sellers</h4>
+                                            <div class="comment-option">
+                                                <form id="list-sellers" action="#" method="POST"></form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                                        <div class="specification-table">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                                        <div class="customer-review-option">
+                                            <h4><span id="num_comments"> 0 </span> Comments</h4>
+                                            <div class="comment-option" id="customer-reviews">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!-- <div class="row mt-3 m-3">
+            <div class='col-lg-12'>
+                <div id="mapid" style="height:80vh;width:100%"></div>
+            </div>
+        </div> -->
+
+
+
+    </div>
+</section>
+<!-- Product Shop Section End -->
+<script>
+    var baseLayer = new L.tileLayer(
+        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '...',
+        maxZoom: 25
+    }
+    );
+    var map = new L.Map('mapid', {
+        center: new L.LatLng(29.936263, 79.171103),
+        zoom: 9,
+        layers: [baseLayer]
+    });
+</script>
+<script src="/ajax/shopping-cart.js"></script>
+<script src="/ajax/increase_quantity.js"></script>
+<script src="/ajax/category.js"></script>
+<script src="/ajax/negotiator.js"></script>
+<script>
+    let adder = $('.cart-toggler');
+    let cartRemoveButton = $('.cart-remove');
+    new CartFill(adder);
+    new RemoveFromCart(cartRemoveButton);
+</script>
