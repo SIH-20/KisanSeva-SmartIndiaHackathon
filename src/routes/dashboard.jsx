@@ -37,6 +37,12 @@ var dashRoutes = [
     icon:"ui-2_like",
     component:UserPage
   },
+  {
+    path:"/blocks",
+    name:"Blocks",
+    icon:"ui-2_settings-90",
+    component:Blocks
+  },
   { redirect: true, path: "/", pathTo: "/maps", name: "Dashboard" }
 ];
 export default dashRoutes;
