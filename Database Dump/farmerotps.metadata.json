@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"buyfresh.farmerotps"}],"uuid":"0a004c8a7a674acc80a55afff0c61359"}

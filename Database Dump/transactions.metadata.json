@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"buyfresh.transactions"},{"v":{"$numberInt":"2"},"unique":true,"key":{"sessionId":{"$numberInt":"1"}},"name":"sessionId_1","background":true,"ns":"buyfresh.transactions"}],"uuid":"def466103ed34d1ab78b360484a8fd9d"}

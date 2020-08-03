@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"buyfresh.otps"},{"v":{"$numberInt":"2"},"key":{"expireAt":{"$numberInt":"1"}},"name":"expireAt_1","ns":"buyfresh.otps","expireAfterSeconds":{"$numberInt":"300"},"background":true}],"uuid":"c2e26f00f6b346a4bbbb3442ce9662e9"}
