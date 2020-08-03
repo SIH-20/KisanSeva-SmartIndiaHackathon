@@ -22,7 +22,7 @@ class NegotiatedAdapter(private val info: Negotiation,
         val status = itemView.findViewById<TextView>(R.id.status)
         val ivProductImage = itemView.findViewById<ImageView>(R.id.ivProductImage)
         val tvCategory = itemView.findViewById<TextView>(R.id.tvCategory)
-        val tvQuality = itemView.findViewById<TextView>(R.id.tvQuality)
+        val tvQuality = itemView.findViewById<TextView>(R.id.district)
         val tvQuantity = itemView.findViewById<TextView>(R.id.tvQuantity)
 
     }

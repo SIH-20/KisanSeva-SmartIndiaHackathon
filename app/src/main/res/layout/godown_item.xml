@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -23,16 +24,6 @@
         android:layout_height="match_parent"
         android:paddingBottom="10dp">
 
-        <ImageView
-            android:id="@+id/ivProductImage"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/wheat"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/tvCategory"
             android:layout_width="match_parent"
@@ -43,12 +34,12 @@
             android:gravity="center_vertical"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="Wheat"
+            android:text="Center Name:"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivProductImage" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvQ"
@@ -58,7 +49,7 @@
             android:fontFamily="@font/poppinsbold"
             android:gravity="center_vertical"
             android:paddingStart="10dp"
-            android:text="@string/quality"
+            android:text="District"
             android:textColor="@android:color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,39 +63,24 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/poppinsbold"
             android:gravity="center_vertical"
-            android:text="Elite"
+            android:text="Chamoli"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/tvQ"
             app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
 
-        <TextView
-            android:id="@+id/tvDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="This is the description of the produce by the Farmer, he can change it at any time"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/district" />
 
         <TextView
             android:id="@+id/tvP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppinsbold"
             android:gravity="center_vertical"
-            android:text="@string/quantity"
+            android:text="Officer’s Name"
             android:textColor="@color/blackText"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/district" />
 
         <TextView
             android:id="@+id/tvQuantity"
@@ -112,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/poppinsbold"
-            android:text="20Kg"
+            android:text="Shri Rakesh kumar Dubey"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvP"
@@ -126,12 +102,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:gravity="center_vertical"
-            android:text="@string/price"
+            android:text="Mobile No."
             android:textColor="@android:color/black"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tvQuantity"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvP" />
 
         <TextView
             android:id="@+id/tvPrice"
@@ -139,7 +114,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:gravity="center_vertical"
-            android:text="Rs 12/Kg"
+            android:text="8864820612"
+            android:textColor="@color/link_blue"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/rating"
@@ -147,19 +123,58 @@
             app:layout_constraintTop_toTopOf="@+id/tvQ2"
             app:layout_constraintVertical_bias="0.0" />
 
-
         <TextView
-            android:id="@+id/rating"
+            android:id="@+id/tvQ3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12sp"
-            android:drawableEnd="@drawable/ic_star"
-            android:drawablePadding="6dp"
-            android:text="4.7"
-            android:textColor="@color/blackText"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvPrice" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="Self-potential (in ML): "
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvQ2" />
+
+        <TextView
+            android:id="@+id/tvPrice2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:text="10486"
+            android:textColor="@color/link_blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvQ3"
+            app:layout_constraintStart_toEndOf="@id/tvQ3"
+            app:layout_constraintTop_toTopOf="@+id/tvQ3"
+            tools:layout_editor_absoluteX="86dp" />
+
+        <TextView
+            android:id="@+id/tvQ4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="Private warehouse capacity (in ML): "
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvQ3" />
+
+        <TextView
+            android:id="@+id/tvPrice3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:text="16090"
+            android:textColor="@color/link_blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvQ4"
+            app:layout_constraintStart_toEndOf="@id/tvQ4"
+            app:layout_constraintTop_toTopOf="@+id/tvQ4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

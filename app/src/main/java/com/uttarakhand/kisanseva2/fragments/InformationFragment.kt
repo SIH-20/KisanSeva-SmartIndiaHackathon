@@ -32,10 +32,8 @@ class InformationFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
         val v = inflater.inflate(R.layout.fragment_information, container, false)
-        intent = Intent(context, GodownsActivity::class.java)
-        intent!!.putExtra("url", "https://ukswc.com/warehouses/")
         val links = arrayOf(
-                intent,
+                Intent(context, GodownsActivity::class.java),
                 Intent(context, CropProductionActivity::class.java),
                 Intent(context, SelectProblemActivity::class.java),
                 Intent(context, SoilHealthActivity::class.java),

@@ -24,7 +24,7 @@ class FarmerInventoryAdapter(val infos: FarmerInfo,
     class InventoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cardView = itemView.findViewById<CardView>(R.id.cardView2)
         val tvCategory: TextView = itemView.findViewById<TextView>(R.id.tvCategory)
-        val tvQuality: TextView = itemView.findViewById<TextView>(R.id.tvQuality)
+        val tvQuality: TextView = itemView.findViewById<TextView>(R.id.district)
         val tvDescription: TextView = itemView.findViewById<TextView>(R.id.tvDescription)
         val tvQuantity: TextView = itemView.findViewById<TextView>(R.id.tvQuantity)
         val tvPrice: TextView = itemView.findViewById<TextView>(R.id.tvPrice)
