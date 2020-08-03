@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.uttarakhand.kisanseva2.model.FarmerInfo;
 import com.uttarakhand.kisanseva2.model.IsLoggedIn;
 import com.uttarakhand.kisanseva2.model.allOrders.AllOrders;
+import com.uttarakhand.kisanseva2.model.blockchain.BlockchainResponse;
 import com.uttarakhand.kisanseva2.model.negotiation.Negotiation;
 import com.uttarakhand.kisanseva2.model.uploadItem.ItemUploadInventory;
 
@@ -63,4 +64,14 @@ public interface APIs {
                                  @Field("quantity") String quantity,
                                  @Field("price") String price,
                                  @Field("image") String image);
+
+    @FormUrlEncoded
+    @POST("api/mobile/farmer/greivance")
+    Call<JsonObject> submitGrievance(@Field("content") String content,
+                                     @Field("category") String category,
+                                     @Field("crop") String crop);
+
+    @GET("api/mobile/farmer/block")
+    Call<BlockchainResponse> loanInfo();
+
 }

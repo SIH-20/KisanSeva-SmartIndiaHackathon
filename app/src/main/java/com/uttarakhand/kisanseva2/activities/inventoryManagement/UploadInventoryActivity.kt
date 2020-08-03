@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter
 import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.appbar.AppBarLayout
@@ -94,9 +95,9 @@ class UploadInventoryActivity : AppCompatActivity() {
         } else if (etCategoryIn.text!!.toString() == "") {
             etCategory.error = "Add Category"
             etCategory.requestFocus()
-        } else if (etQualityIn.text!!.toString() == "") {
-            etQuality.error = "Add Quality"
-            etQuality.requestFocus()
+        } else if (etDescIn.text!!.toString() == "") {
+            etDesc.error = "Add Quality"
+            etDesc.requestFocus()
         } else if (etQuantityIn.text!!.toString() == "") {
             etQuantity.error = "Add Quantity Available"
             etQuantity.requestFocus()
@@ -162,7 +163,7 @@ class UploadInventoryActivity : AppCompatActivity() {
                         etNameIn.text!!.toString(),
                         etDescriptionIn.text!!.toString(),
                         spinner_type.selectedItem.toString(),
-                        etQualityIn.text!!.toString(),
+                        etDescIn.text!!.toString(),
                         etQuantityIn.text!!.toString(),
                         etPriceIn.text!!.toString(),
                         etCategoryIn.text!!.toString())
@@ -178,11 +179,37 @@ class UploadInventoryActivity : AppCompatActivity() {
                         Toast.makeText(this@UploadInventoryActivity, response.message(), Toast.LENGTH_SHORT).show()
                         Log.d("ItemUploadSuc", response.body()!!.toString())
                         if (response.message().equals("OK")) {
-                            startActivity(Intent(this@UploadInventoryActivity, MainActivity::class.java))
-                            finish()
+                            Toast.makeText(this@UploadInventoryActivity, "Crop Uploaded Successfully", Toast.LENGTH_LONG).show()
+                            giveClusterDialog()
                         }
                     }
                 })
+    }
+
+    private fun giveClusterDialog() {
+        val builder = AlertDialog.Builder(this)
+        //set title for alert dialog
+        builder.setTitle("Cluster Joining Request")
+        //set message for alert dialog
+        builder.setMessage("Your uploaded quantity is less than ${etQuantityIn.text!!.toString()}, so we recommend you to join the nearby ALMORA cluster 15")
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+        //performing positive action
+        builder.setPositiveButton("Yes, Send Request") { dialogInterface, which ->
+            Toast.makeText(applicationContext, "Request Sent Successfully", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this@UploadInventoryActivity, MainActivity::class.java))
+            finish()
+        }
+        //performing negative action
+        builder.setNegativeButton("No") { dialogInterface, which ->
+            startActivity(Intent(this@UploadInventoryActivity, MainActivity::class.java))
+            finish()
+        }
+        // Create the AlertDialog
+        val alertDialog: AlertDialog = builder.create()
+        // Set other dialog properties
+        alertDialog.setCancelable(false)
+        alertDialog.show()
+
     }
 
     private fun removeLoading() {
@@ -214,7 +241,7 @@ class UploadInventoryActivity : AppCompatActivity() {
             val handler = Handler()
             handler.postDelayed({
                 ml.visibility = View.GONE
-                etQualityIn.setText(qualities[getRandomNumber(0, 3)])
+                etDescIn.setText(qualities[getRandomNumber(0, 3)])
                 etPriceIn.setText(getString(R.string.predicted_price))
                 Toast.makeText(this, getString(R.string.price_filling_toast), Toast.LENGTH_LONG).show()
                 imageSelected = true

@@ -7,14 +7,16 @@
     android:layout_marginBottom="0dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCreditScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/profile"
+        android:text="Credit Score: 89"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:textColor="@color/blackText"
         android:textStyle="bold"
+        android:drawableEnd="@drawable/ic_info"
+        android:drawablePadding="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +29,7 @@
         android:src="@drawable/ic_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditScore" />
 
     <TextView
         android:id="@+id/tv_farmer_name"
@@ -95,8 +97,8 @@
                 android:id="@+id/iv"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_pencil"
                 app:layout_constraintBottom_toTopOf="@id/tv"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -142,8 +144,8 @@
                 android:id="@+id/ivWallet"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_profile_wallet"
                 app:layout_constraintBottom_toTopOf="@id/tv2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -187,8 +189,8 @@
                 android:id="@+id/iv3"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_logistics"
                 app:layout_constraintBottom_toTopOf="@id/tv3"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -233,8 +235,8 @@
                 android:id="@+id/iv4"
                 android:layout_width="58dp"
                 android:layout_height="58dp"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_about"
                 app:layout_constraintBottom_toTopOf="@id/tv4"
                 app:layout_constraintEnd_toEndOf="parent"

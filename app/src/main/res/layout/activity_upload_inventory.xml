@@ -105,7 +105,8 @@
                     android:id="@+id/etNameIn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:text="Wheat 1 Kg" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -127,7 +128,8 @@
                     android:id="@+id/etCategoryIn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:text="Wheat" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Spinner
@@ -142,7 +144,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/etCategory" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/etQuality"
+                android:id="@+id/etDesc"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -157,7 +159,7 @@
                 app:startIconTintMode="screen">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etQualityIn"
+                    android:id="@+id/etDescIn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text" />
@@ -176,14 +178,15 @@
                 app:endIconMode="custom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etQuality"
+                app:layout_constraintTop_toBottomOf="@+id/etDesc"
                 app:startIconTintMode="screen">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etQuantityIn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="200" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -227,7 +230,8 @@
                     android:id="@+id/etDescriptionIn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:text="Wheat is a grass widely cultivated for its seed, a cereal grain which is a worldwide staple food. The many species of wheat together make up the genus Triticum; the most widely grown is common wheat " />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ProgressBar

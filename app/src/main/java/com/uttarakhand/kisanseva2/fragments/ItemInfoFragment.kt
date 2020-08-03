@@ -36,7 +36,7 @@ class ItemInfoFragment(private val item: Item?) : Fragment() {
         val v = inflater.inflate(R.layout.fragment_item_info, container, false)
         v.etNameIn.setText(item!!.title)
         v.etCategoryIn.setText(item.category)
-        v.etQualityIn.setText(item.quality)
+        v.etDescIn.setText(item.quality)
         v.etQuantityIn.setText(item.quantity.toString())
         v.etPriceIn.setText(item.price.toString())
         v.etDescriptionIn.setText(item.description)
@@ -53,9 +53,9 @@ class ItemInfoFragment(private val item: Item?) : Fragment() {
         } else if (etCategoryIn.text!!.toString() == "") {
             etCategory.error = "Add Category"
             etCategory.requestFocus()
-        } else if (etQualityIn.text!!.toString() == "") {
-            etQuality.error = "Add Quality"
-            etQuality.requestFocus()
+        } else if (etDescIn.text!!.toString() == "") {
+            etDesc.error = "Add Quality"
+            etDesc.requestFocus()
         } else if (etQuantityIn.text!!.toString() == "") {
             etQuantity.error = "Add Quantity Available"
             etQuantity.requestFocus()

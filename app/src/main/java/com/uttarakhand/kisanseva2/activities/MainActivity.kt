@@ -3,6 +3,7 @@ package com.uttarakhand.kisanseva2.activities
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -122,11 +123,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_quality -> Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show()
+            R.id.nav_insurance -> {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.pmfby.gov.in/"))
+                startActivity(browserIntent)
+            }
             R.id.nav_lang -> changeLanguage()
             R.id.nav_orders -> startActivity(Intent(this, OrdersInfoActivity::class.java))
             R.id.nav_negotiate -> startActivity(Intent(this, NegotiatedActivity::class.java))
             R.id.nav_weather -> startActivity(Intent(this, WeatherActivity::class.java))
+            R.id.nav_loan -> startActivity(Intent(this, BlockchainActivity::class.java))
+            R.id.nav_feedback -> startActivity(Intent(this, FeedbackActivity::class.java))
             R.id.nav_signout -> {
                 FirebaseAuth.getInstance().signOut()
                 startActivity(Intent(this, LoginActivity::class.java))

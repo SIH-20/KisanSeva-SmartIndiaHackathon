@@ -898,4 +898,8 @@
     <string name="earning">आपकी कमाई</string>
     <string name="reach_buyer">खरीदार तक पहुँचें</string>
     <string name="call">कॉल</string>
+    <string name="godown">गोदाम</string>
+    <string name="contact_admin">संपर्क व्यवस्थापक</string>
+    <string name="crop_insurance">फसल बीमा</string>
+    <string name="loan_information">ऋण की जानकारी</string>
 </resources>
