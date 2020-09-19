@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/shivamkumard107/KisanSeva2">
+  <a href="https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon">
     <img src="images/icon.svg" alt="Logo" width="200" height="200">
   </a>
 
@@ -35,14 +35,14 @@
   <p align="center">
      Problem Statement: Lack of technological intervention in value addition of agricultural products produced by SHGs/FPGs
     <br />
-    <a href="https://github.com/shivamkumard107/KisanSeva2/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.youtube.com/watch?v=N_tYhvMh8XE">View Demo</a>
     ·
-    <a href="https://github.com/shivamkumard107/KisanSeva2/issues">Report Bug</a>
+    <a href="https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/issues">Report Bug</a>
     ·
-    <a href="https://github.com/shivamkumard107/KisanSeva2/issues">Request Feature</a>
+    <a href="https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/issues">Request Feature</a>
   </p>
 </p>
 
@@ -160,16 +160,16 @@ Complete Project Link: [https://github.com/SIH-20/NC_GEU_MK100_Codeline](https:/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/shivamkumard107/KisanSeva2.svg?style=flat-square
-[contributors-url]: https://github.com/shivamkumard107/KisanSeva2/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shivamkumard107/KisanSeva2.svg?style=flat-square
-[forks-url]: https://github.com/shivamkumard107/KisanSeva2/network/members
-[stars-shield]: https://img.shields.io/github/stars/shivamkumard107/KisanSeva2.svg?style=flat-square
-[stars-url]: https://github.com/shivamkumard107/KisanSeva2/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shivamkumard107/KisanSeva2.svg?style=flat-square
-[issues-url]: https://github.com/shivamkumard107/KisanSeva2/issues
-[license-shield]: https://img.shields.io/github/license/shivamkumard107/KisanSeva2.svg?style=flat-square
-[license-url]: https://github.com/shivamkumard107/KisanSeva2/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/SIH-20/KisanSeva-SmartIndiaHackathon.svg?style=flat-square
+[contributors-url]: https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SIH-20/KisanSeva-SmartIndiaHackathon.svg?style=flat-square
+[forks-url]: https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/network/members
+[stars-shield]: https://img.shields.io/github/stars/SIH-20/KisanSeva-SmartIndiaHackathon.svg?style=flat-square
+[stars-url]: https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SIH-20/KisanSeva-SmartIndiaHackathon.svg?style=flat-square
+[issues-url]: https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/issues
+[license-shield]: https://img.shields.io/github/license/SIH-20/KisanSeva-SmartIndiaHackathon.svg?style=flat-square
+[license-url]: https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/shivam-kumar-a9aa96131/
 [product-screenshot]: images/icon.svg
