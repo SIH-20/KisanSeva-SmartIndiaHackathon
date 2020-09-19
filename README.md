@@ -1,7 +1,7 @@
 #This is our repository for team Codeline. Our team consists of Abhinav, Chirag, Ishan, Kshitij, Pranav and Shivam.
 
 We have implemented 3 things(change branch to see code):
-1. Android application (![Documentation](https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/edit/android/README.md))
+1. Android application (![Documentation](https://github.com/SIH-20/KisanSeva-SmartIndiaHackathon/blob/android/README.md))
 2. Web App
    Ecommerce Portal - [buyfreshdtu.xyz](https://buyfreshdtu.xyz/)
    Admin Portal - [admin.buyfreshdtu.xyz](https://admin.buyfreshdtu.xyz/)
