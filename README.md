@@ -33,12 +33,12 @@
   <h3 align="center">Smart India Hackathon 2020 - KisanSeva2 :farmer:</h3>
 
   <p align="center">
-    Winning idea of Smart India Hackthon 2020
+     Problem Statement: Lack of technological intervention in value addition of agricultural products produced by SHGs/FPGs
     <br />
-    <a href="https://github.com/shivamkumard107/KisanSeva2/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/shivamkumard107/KisanSeva2/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/shivamkumard107/KisanSeva2">View Demo</a>
+    <a href="https://youtube.com/">View Demo</a>
     ·
     <a href="https://github.com/shivamkumard107/KisanSeva2/issues">Report Bug</a>
     ·
@@ -53,11 +53,8 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+  * [App Screenshots](#app-screenshots)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -70,77 +67,66 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+Uttarakhand is primarily an agricultural state. The contribution of agriculture to the states domestic product is about 22.4 percent and the population dependent on agriculture for their livelihood is about 75 -85 percent. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+For instance, As per Uttarakhand state planning Commission, 2007, the productivity of wheat in the hills is 13.2 quintals/hectare and rice is 12.36 quintals/hectare. Thus, agricultural opportunities are developing rapidly in the state. Especially, in sector of organic agriculture, Uttarakhand Is highly accessible because of largely rain-fed agriculture and very low use of chemical fertilizers and pesticides, the produce grown by farmer in the area are not only rich in nutrients but also have high medicinal value and provides an opportunity to develop and farmer friendly environment of organic farming that provide better value in the market to Small and Marginal Land holder. 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+The various project of Department of rural development and agriculture are continuously in the process of enhancing farmer and self-help groups (SHGs) livelihoods by adding value in their produce and providing favourable markets. 
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+We provided a technology-based interventions to farmers for Value addition to agriculture produce, Packaging, Logistic movement, Farmer Branding and marketing avenues. This platform is built to enable direct movement of farmer to the consumer and reduce the intermediates who take away a lion's share of commission.
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Jetpack Components](https://developer.android.com/jetpack)
+* [Firebase](https://firebase.google.com/)
+* [Retrofit](https://square.github.io/retrofit/)
+
+### APIs Used
+All the APIs build for this project are documented here 
+https://www.getpostman.com/collections/f90435ac53a58259d965
+
+### App Screenshots
+| ![SS](images/ss1) | ![SS](images/ss2) | ![SS](images/ss3) |
+|:---:|:---:|:---:|
+| Farmer's Inventory | Add Crops to sell | Crop Quality Prediction |
+
+| ![SS](images/ss4) | ![SS](images/ss5) | ![SS](images/ss6) |
+|:---:|:---:|:---:|
+| Wheat/Rice Quality | Farmer's Profile | Predicted Quality By ML model |
+
+| ![SS](images/ss7) | ![SS](images/ss8) | ![SS](images/ss9) |
+|:---:|:---:|:---:|
+| Weather Updates | Search a feature | Information Section |
+
+| ![SS](images/ss10) | ![SS](images/ss11) | ![SS](images/ss12) |
+|:---:|:---:|:---:|
+| Farmer's Earning Wallet | Navigation Drawer Options | Loan Ledger |
+
+| ![SS](images/ss13) | ![SS](images/ss14) | ![SS](images/ss15) |
+|:---:|:---:|:---:|
+| Soil Testing Labs | Farmer's Credit Score | Maps to connect buyer/seller |
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+ Cloning from github
 ```sh
-npm install npm@latest -g
+git clone https://github.com/pytorch/android-demo-app.git
+cd HelloWorldApp
 ```
 
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+If Android SDK and Android NDK are already installed you can install this application to the connected android device or emulator with:
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+./gradlew installDebug
 ```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/shivamkumard107/KisanSeva2/issues) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+For contributing to this project do follow the below steps. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -167,7 +153,10 @@ Complete Project Link: [https://github.com/SIH-20/NC_GEU_MK100_Codeline](https:/
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Smart India Hackathon](https://www.sih.gov.in/)
+* [Pranav Sharma](https://github.com/pragmatist-strategist)
+* [Mohit Ranjan](https://github.com/MohitR1999)
+* [Flaticons](https://www.flaticon.com/)
 
 
 
